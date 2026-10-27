@@ -1,0 +1,24 @@
+補充實驗：echo 中文訊息加入 ASCII 文字
+執行方式：AI 工具在本機執行；本紀錄獨立於既有 pcapng。
+預測記錄時間：2026-10-27T23:20:18+08:00
+輸入：早安阿 TCP 8080
+預測：HTTP 200，body 為 'ECHO: 早安阿 TCP 8080\n'，字元數 19，UTF-8 長度與 Content-Length 均為 25 bytes。
+
+實測完成時間：2026-10-27T23:20:18+08:00
+TCP 四元組：(127.0.0.1, 60638, 127.0.0.1, 60635)
+
+原始 Request：
+GET /lab/S412242266-fac0106b/echo?msg=%E6%97%A9%E5%AE%89%E9%98%BF%20TCP%208080 HTTP/1.1
+Host: 127.0.0.1:60635
+Connection: close
+
+原始 Response：
+HTTP/1.1 200 OK
+Content-Type: text/plain; charset=utf-8
+Content-Length: 25
+Connection: close
+
+ECHO: 早安阿 TCP 8080
+
+實測：status=200，字元數=19，Content-Length=25，actual body bytes=25。
+預測與實測一致。

@@ -1,0 +1,9 @@
+PASS P01 normal GET 200
+PASS P02 unknown path 404
+PASS P03 UTF-8 Content-Length
+PASS P04 302 requires Location
+PASS P05 POST gives 405
+PASS P06 HTTP/1.1 needs Host
+PASS P07 percent-encoded UTF-8 echo
+PASS P08 wait for all headers
+Result: 8/8 public tests passed
