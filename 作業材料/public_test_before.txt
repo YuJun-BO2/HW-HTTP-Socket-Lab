@@ -1,0 +1,9 @@
+PASS P01 normal GET 200
+PASS P02 unknown path 404
+FAIL P03 UTF-8 Content-Length -> AssertionError: Content-Length=21, actual bytes=41
+FAIL P04 302 requires Location -> AssertionError: 
+FAIL P05 POST gives 405 -> AssertionError: 
+FAIL P06 HTTP/1.1 needs Host -> AssertionError: 
+FAIL P07 percent-encoded UTF-8 echo -> AssertionError: Content-Length=17, actual bytes=21
+FAIL P08 wait for all headers -> AssertionError: Server responded before receiving complete CRLF-CRLF
+Result: 2/8 public tests passed

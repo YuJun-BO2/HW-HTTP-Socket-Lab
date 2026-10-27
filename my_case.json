@@ -1,0 +1,17 @@
+{
+  "student_id": "S412242266",
+  "token": "fac0106b",
+  "prefix": "/lab/S412242266-fac0106b",
+  "hello_path": "/lab/S412242266-fac0106b/hello",
+  "unicode_path": "/lab/S412242266-fac0106b/unicode",
+  "redirect_path": "/lab/S412242266-fac0106b/redirect",
+  "missing_path": "/lab/S412242266-fac0106b/not-found",
+  "echo_path": "/lab/S412242266-fac0106b/echo",
+  "hello_body": "Hello, S412242266! Token=fac0106b\n",
+  "unicode_body": "網路實驗：S412242266｜測試成功\n",
+  "unicode_utf8_bytes": 41,
+  "hello_utf8_bytes": 34,
+  "example_message": "台北 TCP / HTTP",
+  "example_echo_target": "/lab/S412242266-fac0106b/echo?msg=%E5%8F%B0%E5%8C%97%20TCP%20%2F%20HTTP",
+  "raw_get_request": "GET /lab/S412242266-fac0106b/hello HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n"
+}
