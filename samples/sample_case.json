@@ -1,0 +1,17 @@
+{
+  "student_id": "S12345678",
+  "token": "dae6fbfe",
+  "prefix": "/lab/S12345678-dae6fbfe",
+  "hello_path": "/lab/S12345678-dae6fbfe/hello",
+  "unicode_path": "/lab/S12345678-dae6fbfe/unicode",
+  "redirect_path": "/lab/S12345678-dae6fbfe/redirect",
+  "missing_path": "/lab/S12345678-dae6fbfe/not-found",
+  "echo_path": "/lab/S12345678-dae6fbfe/echo",
+  "hello_body": "Hello, S12345678! Token=dae6fbfe\n",
+  "unicode_body": "網路實驗：S12345678｜測試成功\n",
+  "unicode_utf8_bytes": 40,
+  "hello_utf8_bytes": 33,
+  "example_message": "台北 TCP / HTTP",
+  "example_echo_target": "/lab/S12345678-dae6fbfe/echo?msg=%E5%8F%B0%E5%8C%97%20TCP%20%2F%20HTTP",
+  "raw_get_request": "GET /lab/S12345678-dae6fbfe/hello HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n"
+}

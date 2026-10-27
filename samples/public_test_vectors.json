@@ -1,0 +1,72 @@
+{
+  "student_id": "S12345678",
+  "note": "CRLF is represented by JSON escapes. Public examples; each student must run own instance and create actual captures.",
+  "vectors": [
+    {
+      "id": "P01",
+      "http_request_raw": "GET /lab/S12345678-dae6fbfe/hello HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n",
+      "expected_status": 200,
+      "expected_body_text": "Hello, S12345678! Token=dae6fbfe\n",
+      "expected_content_length_bytes": 33
+    },
+    {
+      "id": "P02",
+      "http_request_raw": "GET /lab/S12345678-dae6fbfe/not-found HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n",
+      "expected_status": 404,
+      "expected_body_text": "Not Found\n",
+      "expected_content_length_bytes": 10
+    },
+    {
+      "id": "P03",
+      "http_request_raw": "GET /lab/S12345678-dae6fbfe/unicode HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n",
+      "expected_status": 200,
+      "expected_body_text": "網路實驗：S12345678｜測試成功\n",
+      "expected_content_length_bytes": 40
+    },
+    {
+      "id": "P04",
+      "http_request_raw": "GET /lab/S12345678-dae6fbfe/redirect HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n",
+      "expected_status": 302,
+      "expected_body_text": "Redirect\n",
+      "expected_content_length_bytes": 9,
+      "expected_extra_headers": {
+        "Location": "/lab/S12345678-dae6fbfe/hello"
+      }
+    },
+    {
+      "id": "P05",
+      "http_request_raw": "POST /lab/S12345678-dae6fbfe/hello HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n",
+      "expected_status": 405,
+      "expected_body_text": "Method Not Allowed\n",
+      "expected_content_length_bytes": 19,
+      "expected_extra_headers": {
+        "Allow": "GET"
+      }
+    },
+    {
+      "id": "P06",
+      "http_request_raw": "GET /lab/S12345678-dae6fbfe/hello HTTP/1.1\r\nConnection: close\r\n\r\n",
+      "expected_status": 400,
+      "expected_body_text": "Bad Request\n",
+      "expected_content_length_bytes": 12
+    },
+    {
+      "id": "P07",
+      "http_request_raw": "GET /lab/S12345678-dae6fbfe/echo?msg=HTTP%20%E6%B8%AC%E8%A9%A6%2042 HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n",
+      "expected_status": 200,
+      "expected_body_text": "ECHO: HTTP 測試 42\n",
+      "expected_content_length_bytes": 21
+    },
+    {
+      "id": "P08",
+      "http_request_raw": "GET /lab/S12345678-dae6fbfe/hello HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n",
+      "expected_status": 200,
+      "expected_body_text": "Hello, S12345678! Token=dae6fbfe\n",
+      "expected_content_length_bytes": 33,
+      "chunks_sent_with_delay": [
+        "GET /lab/S12345678-dae6fbfe/hello HTTP/1.1\r\nHo",
+        "st: 127.0.0.1\r\nConnection: close\r\n\r\n"
+      ]
+    }
+  ]
+}

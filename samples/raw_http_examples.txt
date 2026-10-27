@@ -1,0 +1,12 @@
+# The ID and token below are placeholders: replace them with your own `my_case.json` values.
+# HTTP uses CRLF (\r\n) even if this text file is displayed with normal newlines.
+
+GET /lab/<ID>-<TOKEN>/hello HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n
+
+GET /lab/<ID>-<TOKEN>/unicode HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n
+
+GET /lab/<ID>-<TOKEN>/redirect HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n
+
+POST /lab/<ID>-<TOKEN>/hello HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n
+
+# One HTTP request may arrive across multiple recv() calls; beware of assumptions.
